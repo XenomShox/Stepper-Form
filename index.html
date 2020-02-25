@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stepper Form</title>
+
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Linear Stepper</h1>
+            <div>
+                <ul class="progressBar">
+                    <li class="arrange">
+                        <div class="step current-step-bg">
+                            <div><span>1</span></div>
+                        </div>
+                        <div class="progBarText">Email</div>
+                    </li>
+                    <hr class="hr not-current-step-bg-hr" />
+                    <li class="arrange">
+                        <div class="step not-current-step-bg">
+                            <div><span>2</span></div>
+                        </div>
+                        <div class="progBarText">Password</div>
+                    </li>
+                    <hr class="hr not-current-step-bg-hr" />
+                    <li class="arrange">
+                        <div class="step not-current-step-bg">
+                            <div><span>3</span></div>
+                        </div>
+                        <div class="progBarText">Validate</div>
+                    </li>
+                </ul>
+            </div>
+            <form action="post" class="myForm">
+                <fieldset id="first" class="">
+                    <div>
+                        <label for="email">Email address</label>
+                    </div>
+                    <div>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input class="btn" type="button" value="Next" />
+                        <p class="error-text no-select"></p>
+                    </div>
+                </fieldset>
+
+                <fieldset id="second" class="">
+                    <div>
+                        <label for="pass">Password</label>
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            id="pass"
+                            name="pass"
+                            placeholder="Password"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <input class="btn" type="button" value="Previous" />
+                        <input class="btn" type="button" value="Next" />
+                        <p class="error-text no-select"></p>
+                    </div>
+                </fieldset>
+                <fieldset id="validate" class="">
+                    <input class="btn" type="button" value="Previous" />
+                    <input class="btn" type="submit" value="Submit" />
+                </fieldset>
+            </form>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
